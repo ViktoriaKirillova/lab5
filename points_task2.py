@@ -23,7 +23,7 @@ class Figure():
     def __repr__(self):
         return str(self.get_points())
 
-    def is_in(self, point): #метод подразумевает работу только с треугольниками
+    def is_in(self, point): 
         xp = point.get_x()
         xy = point.get_y()
         q = (self.points[0].get_x() - xp) * (self.points[1].get_y()-self.points[0].get_y()) - (self.points[1].get_x() - self.points[0].get_x()) * (self.points[0].get_y() - xy)
@@ -42,7 +42,7 @@ c = Point(-5, 2)
 fig = Figure([a, b, c])
 
 print(fig)
-d = Point (7,6) #тут может быть любая точка, я просто сделала ввод из кода, а не с консоли
+d = Point (7,6) 
 print(fig.is_in(d))
 
 
